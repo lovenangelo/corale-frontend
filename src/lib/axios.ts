@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "http://206.189.147.71/ecommerce/coral-ecommerce-api/public",
   headers: {
     common: {
       Accept: "application/json",
