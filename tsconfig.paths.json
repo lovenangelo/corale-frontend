@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "test-utils": ["./utils/test-utils"],
+      "^.+\\.webp$": ["jest-transform-stub"]
+    }
+  }
+}
