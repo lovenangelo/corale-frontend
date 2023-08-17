@@ -192,14 +192,24 @@ const Index = () => {
               </>
             )
           )}
-          {!queryIsLoading && addresses.length < 2 && (
-            <AddressForm
-              onAddSuccess={() => {
-                refetch();
-              }}
-              setAddresses={setAddresses}
-            />
-          )}
+          {user !== null
+            ? !queryIsLoading &&
+              addresses.length < 2 && (
+                <AddressForm
+                  onAddSuccess={() => {
+                    refetch();
+                  }}
+                  setAddresses={setAddresses}
+                />
+              )
+            : addresses.length < 1 && (
+                <AddressForm
+                  onAddSuccess={() => {
+                    refetch();
+                  }}
+                  setAddresses={setAddresses}
+                />
+              )}
           <hr />
           <Collapsible>
             <CollapsibleTrigger

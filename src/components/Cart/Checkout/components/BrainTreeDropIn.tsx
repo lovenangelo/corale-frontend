@@ -25,11 +25,9 @@ export default function BraintreeDropIn({
     dropin.Dropin | undefined
   >(undefined);
   const orderAddress = useAppSelector((state) => state.orderAddress.value);
-  const orderPaymentMethod = useAppSelector(
-    (state) => state.orderPaymentMethodReducer.value
-  );
   const orderDetails = useAppSelector((state) => state.orderDetails.value);
   const user = useAppSelector((state) => state.user.value);
+  const address = useAppSelector((state) => state.orderAddress.value);
   const dispatch = useAppDispatch();
   useEffect(() => {
     if (showDropIn && braintreeInstance === undefined) {
@@ -61,7 +59,6 @@ export default function BraintreeDropIn({
 
   const onPaymentCompleted = async () => {
     setIsProcessingOrder(true);
-    console.log(orderAddress, orderDetails, orderPaymentMethod);
     if (orderDetails == null || orderAddress == null) {
       toast({
         variant: "destructive",
@@ -71,18 +68,25 @@ export default function BraintreeDropIn({
       setIsProcessingOrder(false);
       return;
     }
-    console.log("passed", user);
-    const order: Order = {
-      user_id: user?.id,
+    let order: Order = {
+      user_id: user?.id ?? null,
       payment_method: "card",
       total_amount: orderDetails?.grandTotal,
       order_items: orderDetails.items,
       order_address_id: orderAddress.id,
     };
+    if (user == null) {
+      order = {
+        ...order,
+        ...address,
+      };
+    }
     try {
       toast({
         title: "Processing order...",
       });
+      console.log(order);
+
       await placeOrder(order);
       toast({
         title: "Successfull!",

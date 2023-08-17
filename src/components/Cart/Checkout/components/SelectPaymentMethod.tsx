@@ -43,7 +43,7 @@ const SelectPaymentMethod = ({
       return;
     }
     const order: Order = {
-      user_id: user?.id,
+      user_id: user?.id ?? null,
       payment_method: paymentMethod,
       total_amount: orderDetails?.grandTotal,
       order_items: orderDetails.items,

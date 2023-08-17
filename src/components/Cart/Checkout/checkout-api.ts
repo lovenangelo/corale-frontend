@@ -1,5 +1,5 @@
 import axiosClient from "@/lib/axios";
-import { Order } from "./order-type";
+import { Order, OrderWithAddress } from "./order-type";
 
 export const createAddress = async (address: {
   fullname: string;
@@ -20,7 +20,7 @@ export const deleteAddress = async (id: number) => {
   return await axiosClient.delete(`/api/order/address/${id}`);
 };
 
-export const placeOrder = async (order: Order) => {
+export const placeOrder = async (order: Order | OrderWithAddress) => {
   const res = await axiosClient.post("/api/orders", order);
   console.log(res);
 };
