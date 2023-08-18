@@ -45,6 +45,7 @@ const LoginForm = () => {
   const onSubmit: SubmitHandler<LoginFormSchemaType> = async (data) => {
     try {
       setIsLoading(true);
+      await axiosClient.get("/sanctum/csrf-cookie");
       await axiosClient.post("/login", data);
       const res = await axiosClient.get("api/user");
       dispatch(

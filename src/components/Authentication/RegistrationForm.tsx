@@ -58,6 +58,7 @@ const RegistrationForm = () => {
   const onSubmit: SubmitHandler<RegsitrationFormSchemaType> = async (data) => {
     try {
       setIsLoading(true);
+      await axiosClient.get("/sanctum/csrf-cookie");
       await axiosClient.post("/register", data);
       const res = await axiosClient.get("api/user");
       dispatch(
