@@ -12,7 +12,7 @@ const Brands = () => {
     );
   });
   return (
-    <section className="container py-5 space-y-8 md:space-y-12 mt-8">
+    <section className="py-5 space-y-8 md:space-y-12 mt-8">
       <h1 className="font-bold text-3xl">Shop by Brands</h1>
       <div className="grid grid-cols-3 gap-2 row-auto md:flex md:justify-around">
         {logos}

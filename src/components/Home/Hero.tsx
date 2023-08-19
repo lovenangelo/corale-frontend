@@ -8,7 +8,7 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <section className="container h-96 w-full">
+    <section className="h-96 w-full">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

@@ -34,7 +34,7 @@ const NewArrivals = () => {
   );
 
   return (
-    <section className="container w-full mt-8 lg:mt-10 grid grid-cols-1 rows-auto md:grid-cols-6 lg:grid-row-2 lg:min-h-screen">
+    <section className="w-full mt-8 lg:mt-10 grid grid-cols-1 rows-auto md:grid-cols-6 lg:grid-row-2 lg:min-h-screen">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

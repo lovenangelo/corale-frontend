@@ -125,7 +125,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "container flex justify-between h-20 w-full items-center border-b mb-4",
+        "flex justify-between h-20 w-full items-center border-b mb-4",
         location == "/" && "border-0",
         location == "/auth" && "mb-0",
         location == "/sell" && "mb-0",

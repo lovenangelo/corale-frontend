@@ -43,7 +43,9 @@ function App() {
 
   return (
     <div className="h-full w-full">
-      <Navbar />
+      <div className="px-8">
+        <Navbar />
+      </div>
       <Switch>
         {/* Authentication */}
         <Route path="/auth">
@@ -101,15 +103,17 @@ function App() {
         </Route>
 
         <Route path="/">
-          <>
+          <div className="px-8">
             <Hero />
             <NewArrivals />
-            <HandPickedCollections />
+          </div>
+          <HandPickedCollections />
+          <div className="px-8">
             <Brands />
-            <Suspense fallback={<div>Loading...</div>}>
-              <LazyFooter />
-            </Suspense>
-          </>
+          </div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyFooter />
+          </Suspense>
         </Route>
         <Route>
           <NotFoundPage />
