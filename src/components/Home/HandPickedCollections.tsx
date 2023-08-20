@@ -34,12 +34,12 @@ const HandPickedCollections = () => {
       whileInView={{ opacity: 1 }}
       transition={{ delay: 0.5 }}
       viewport={{ once: true }}
-      className="py-5 md:py-12 bg-[#17494D] space-y-4 overflow-hidden flex flex-col justify-center px-8 mt-8"
+      className="py-5 md:py-12 bg-[#17494D] space-y-4 overflow-hidden flex flex-col justify-center px-8 mt-8 sm:space-y-12"
     >
-      <h1 className="font-semibold text-3xl text-primary-foreground">
+      <h1 className="font-semibold text-3xl text-primary-foreground ">
         Handpicked Collections
       </h1>
-      <div className="md:flex justify-between grid grid-cols-2 gap-5">
+      <div className="md:flex justify-around grid grid-cols-2 gap-5">
         {collections}
       </div>
     </motion.section>
