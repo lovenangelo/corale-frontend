@@ -43,7 +43,7 @@ const Pagination: React.FC<PaginationProps> = ({
   });
 
   return (
-    <ul className="flex space-x-2 w-full justify-center items-center mt-4">
+    <ul className="flex flex-wrap space-y-2 space-x-2 w-full justify-center items-center mt-4">
       {numberedButtons}
     </ul>
   );

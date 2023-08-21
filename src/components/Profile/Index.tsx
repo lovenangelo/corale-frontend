@@ -33,7 +33,7 @@ const Index = () => {
   }
 
   return (
-    <div className="container py-4 min-h-screen">
+    <div className="mx-8 py-4 min-h-screen">
       <div className="flex space-x-4 justify-between items-center">
         <h1 className="text-sm lg:text-2xl font-bold text-[#17494D]">
           PROFILE

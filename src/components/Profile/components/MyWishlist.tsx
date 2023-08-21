@@ -82,7 +82,9 @@ const MyWishlist = () => {
       {wishlistQuery.isLoading || isLoading ? (
         <CardSkeleton />
       ) : items.length !== 0 ? (
-        items
+        <div className="grid grid-cols-1 md:grid-cols-3 row-auto col-span-3 gap-2">
+          {items}
+        </div>
       ) : (
         <div className="flex w-full justify-center col-span-4">
           <h1>No results</h1>

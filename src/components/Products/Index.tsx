@@ -123,7 +123,7 @@ const Index = ({ category }: { category: string }) => {
                 <SelectContent>
                   <SelectItem value="price.desc">Price: High to Low</SelectItem>
                   <SelectItem value="price.asc">Price: Low to High </SelectItem>
-                  <SelectItem value="featured.asc">Featured</SelectItem>
+                  <SelectItem value="featured.asc">Featured</SelectItem>`
                 </SelectContent>
               </Select>
             </div>
@@ -132,7 +132,9 @@ const Index = ({ category }: { category: string }) => {
             <CardSkeleton />
           ) : items.length !== 0 ? (
             <>
-              {items}{" "}
+              <div className="grid grid-cols-1 md:grid-cols-3 row-auto col-span-3 gap-2">
+                {items}
+              </div>
               <div className={cn("col-span-3 w-full")}>
                 <Pagination
                   nextPageUrl={handbags.data?.data.next_page_url}

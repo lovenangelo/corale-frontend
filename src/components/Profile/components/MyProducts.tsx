@@ -80,7 +80,9 @@ const MyProducts = () => {
         <CardSkeleton />
       ) : items.length !== 0 ? (
         <>
-          {items}{" "}
+          <div className="grid grid-cols-1 md:grid-cols-3 row-auto col-span-3 gap-2">
+            {items}
+          </div>
           <div className={cn("col-span-3 w-full")}>
             <Pagination
               nextPageUrl={products.data?.data.next_page_url}
