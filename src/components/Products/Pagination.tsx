@@ -34,7 +34,14 @@ const Pagination: React.FC<PaginationProps> = ({
       <li key={index}>
         <PaginationButton
           disabled={link.active}
-          url={link.url}
+          url={
+            link.url
+              ? link.url.replace(
+                  "https://sea-turtle-app-pothv.ondigitalocean.app",
+                  "https://sea-turtle-app-pothv.ondigitalocean.app/app"
+                )
+              : null
+          }
           text={link.label}
           setIsLoading={setIsLoading}
         />
