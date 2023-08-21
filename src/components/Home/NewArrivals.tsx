@@ -34,7 +34,7 @@ const NewArrivals = () => {
   );
 
   return (
-    <section className="w-full mt-8 lg:mt-10 lg:grid-row-2 lg:min-h-screen space-y-8">
+    <section className="w-full mt-8 lg:mt-10 space-y-8">
       <div className="flex">
         <motion.div
           initial={{ opacity: 0 }}
