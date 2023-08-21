@@ -49,7 +49,7 @@ const SingleProduct = ({ id }: { id: string }) => {
     setIsLoading(true);
     if (data && user) {
       try {
-        await axiosClient.get("/sanctum/csrf-cookie");
+        // await axiosClient.get("/sanctum/csrf-cookie");
         await addCartItem(data?.id, quantity);
         toast({ title: "Successfully added new item to your cart" });
       } catch (error) {
@@ -86,7 +86,7 @@ const SingleProduct = ({ id }: { id: string }) => {
 
   if (fetchLoading) return <SingleProductSkeleton />;
   return (
-    <div className="mx-8 grid grid-cols-1 md:grid-cols-2 rows-auto w-full h-full ">
+    <div className="px-8 grid grid-cols-1 md:grid-cols-2 rows-auto w-full h-full ">
       <div className="h-full sm:h-[calc(100vh-80px)] w-full sm:p-8 rounded-md">
         <LazyLoadImage
           height={"100%"}
