@@ -89,7 +89,14 @@ export default function Search() {
         );
         setSearchResultsList([...searchResultsList, ...searchOptions]);
 
-        dispatch(changeSearchQuery(data?.data.data.next_page_url ?? null));
+        dispatch(
+          changeSearchQuery(
+            data?.data.data.next_page_url.replace(
+              "https://sea-turtle-app-pothv.ondigitalocean.app",
+              "https://sea-turtle-app-pothv.ondigitalocean.app/app"
+            ) ?? null
+          )
+        );
       }
     },
   });
