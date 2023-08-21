@@ -279,7 +279,7 @@ const Index = () => {
   });
 
   return (
-    <div className="container">
+    <div className="mx-8">
       <h1 className="font-bold text-xl mt-4">My Cart</h1>
       {cart.isLoading ? (
         <SkeletonLoading />

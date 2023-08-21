@@ -93,7 +93,7 @@ const Index = ({ category }: { category: string }) => {
     <Layout>
       {category == "handbags" && <HeroPromo />}
       {/* Sets grid */}
-      <div className="container md:mt-8 grid row-auto grid-cols-4 pb-8">
+      <div className="mx-8 md:mt-8 grid row-auto grid-cols-4 pb-8">
         <div className="col-span-1 space-y-2 pr-4">
           <h1 className="mt-8 md:mt-0 sm:text-2xl lg:text-4xl font-bold mb-4 md:mb-8 text-[#1B4B66]">
             {category.toUpperCase()}

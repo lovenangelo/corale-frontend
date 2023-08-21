@@ -175,7 +175,7 @@ const Index = () => {
   });
 
   return (
-    <div className="container">
+    <div>
       <div className="grid sm:grid-cols-3 mt-8 gap-8 ">
         <div className="sm:col-span-2 space-y-8 ">
           <h1 className="font-bold text-xl">Checkout</h1>

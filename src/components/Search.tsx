@@ -63,7 +63,7 @@ export default function Search() {
                   variant={"ghost"}
                   className="border-b-2 h-24 flex items-center w-full justify-between p-4"
                 >
-                  <div className="sm:w-1/4 h-full">
+                  <div className="hidden sm:block sm:w-1/4 h-full">
                     <LazyLoadImage
                       height={"100%"}
                       width={"100%"}
@@ -76,9 +76,11 @@ export default function Search() {
                       alt=""
                     />
                   </div>
-                  <div className="text-left sm:text-right">
-                    <h1 className="font-bold text-lg">{result.name}</h1>
-                    <p className="w-48 truncate">{result.subtitle}</p>
+                  <div className="text-left w-full sm:text-right">
+                    <h1 className="font-bold text-xs sm:text-lg">
+                      {result.name}
+                    </h1>
+                    <p className="truncate">{result.subtitle}</p>
                   </div>
                 </Button>
               </Link>
@@ -143,7 +145,7 @@ export default function Search() {
         <div
           onScroll={handleScroll}
           data-testId="search-scroll-container"
-          className="translate-y-14 max-h-60 absolute w-full bg-primary-foreground z-50 overflow-auto rounded-b-lg"
+          className="translate-y-14 max-h-60 absolute bg-primary-foreground w-full z-50 overflow-auto rounded-b-lg"
         >
           {searchResults.data && <>{searchResultsList}</>}
           {searchResultsList.length == 0 && search.length !== 0 && (

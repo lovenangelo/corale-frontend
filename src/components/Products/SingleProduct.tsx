@@ -81,7 +81,7 @@ const SingleProduct = ({ id }: { id: string }) => {
 
   if (fetchLoading) return <SingleProductSkeleton />;
   return (
-    <div className="container">
+    <>
       <div className="grid grid-cols-1 md:grid-cols-2 rows-auto w-full h-full ">
         <div className="h-full sm:h-[calc(100vh-80px)] w-full sm:p-8 rounded-md">
           <LazyLoadImage
@@ -236,7 +236,7 @@ const SingleProduct = ({ id }: { id: string }) => {
           </Tabs>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
