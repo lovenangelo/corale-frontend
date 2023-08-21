@@ -17,7 +17,6 @@ import { updateItems } from "@/redux/slices/cartSlice";
 import { Product } from "./types/product-item";
 import images from "@/lib/images";
 import { addWishListItem } from "@/lib/api/wishlist";
-import axiosClient from "@/lib/axios";
 
 const SingleProduct = ({ id }: { id: string }) => {
   const [quantity, setQuantity] = useState(1);
